@@ -1,0 +1,27 @@
+{
+  "name": "unified-engine-vscode",
+  "version": "0.0.1",
+  "description": "VSCode bindings to unified engine",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianMurphy/unified-engine-vscode.git"
+  },
+  "keywords": [
+    "unified",
+    "engine",
+    "vscode"
+  ],
+  "author": "Christian Murphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristianMurphy/unified-engine-vscode/issues"
+  },
+  "homepage": "https://github.com/ChristianMurphy/unified-engine-vscode#readme",
+  "dependencies": {
+    "vscode-languageserver": "^4.2.1"
+  }
+}
