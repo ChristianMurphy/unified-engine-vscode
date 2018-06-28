@@ -2,9 +2,10 @@
   "name": "unified-engine-vscode",
   "version": "0.0.1",
   "description": "VSCode bindings to unified engine",
-  "main": "client.js",
+  "main": "src/client.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint .",
+    "format": "prettier-eslint --write \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,36 @@
   "homepage": "https://github.com/ChristianMurphy/unified-engine-vscode#readme",
   "dependencies": {
     "vscode-languageserver": "^4.2.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-node": "^6.0.1",
+    "husky": "^1.0.0-rc.9",
+    "lint-staged": "^7.2.0",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "plugins": [
+      "node"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended"
+    ]
+  },
+  "engines": {
+    "node": "^6.0.0 || ^8.0.0 || ^10.0.0",
+    "vscode": ">=1.20.0"
   }
 }
